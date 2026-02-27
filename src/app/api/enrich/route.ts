@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
     const sources: { url: string; fetchedAt: string }[] = [];
 
     // If no API key, return mock data
-    if (!process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY === 'your_anthropic_api_key_here') {
+    if (!process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY === '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') {
       return NextResponse.json(getMockEnrichment(companyName, url));
     }
 
